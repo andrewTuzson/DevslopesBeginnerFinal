@@ -12,4 +12,8 @@ class ProductCell: UICollectionViewCell {
     
     @IBOutlet weak var productImage: UIImageView!
     
+    func updateView(product: Product) {
+        productImage.image = UIImage(named: product.imageName)
+    }
+    
 }

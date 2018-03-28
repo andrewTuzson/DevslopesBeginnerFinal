@@ -34,5 +34,10 @@ class CategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let productVC = storyboard?.instantiateViewController(withIdentifier: "ProductVC") as! ProductVC
+        present(productVC, animated: true, completion: nil)
+    }
 
 }

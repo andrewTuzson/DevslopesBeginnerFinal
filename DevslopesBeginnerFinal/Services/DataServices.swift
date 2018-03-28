@@ -11,6 +11,7 @@ import Foundation
 class DataServices {
     
     static var instance = DataServices()
+    var productIndex = 0 
     
     private(set) public var categories = [
         Category(imageName: "backpackingBG", title: "BACKPACKING"),
@@ -23,6 +24,19 @@ class DataServices {
     
     func getCategories() -> [Category] {
         return categories
+    }
+    
+    private let products = [
+        Product(name: "SLEEPING BAG", imageName: "sleepingBag"),
+        Product(name: "CAMPING STOVE", imageName: "campingStove"),
+        Product(name: "FOOD COOLER", imageName: "foodCooler"),
+        Product(name: "PARACORD BRACELET", imageName: "paracordBracelet"),
+        Product(name: "PUP TENT", imageName: "pupTent"),
+        Product(name: "TACTICAL KNIFE", imageName: "tacticalKnife")
+    ]
+    
+    func getProducts() -> [Product] {
+        return products
     }
     
 }
